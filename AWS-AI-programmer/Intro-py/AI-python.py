@@ -1,148 +1,179 @@
 # PYTHON FOR AI PROGRAMMING
 
 """
-¿QUÉ ES AI PROGRAMMING?
-AI programming = creación de sistemas capaces de realizar tareas que normalmente requieren inteligencia humana.
-Tareas típicas:
-    - entender lenguaje natural
-    - reconocer patrones
-    - tomar decisiones
-    - aprender de los datos
-    - hacer predicciones
-Construir algoritmos que aprendan de datos y produzcan clasificaciones, decisiones o predicciones.
+WHAT IS AI PROGRAMMING?
+AI programming = creating systems capable of performing tasks that normally require human intelligence.
+
+Typical tasks:
+    - understanding natural language
+    - recognizing patterns
+    - making decisions
+    - learning from data
+    - making predictions
+
+Building algorithms that learn from data and produce classifications, decisions, or predictions.
 """
 
 """
-¿POR QUÉ PYTHON SE USA EN IA?
-Python es muy usado en IA porque:
-    - tiene sintaxis simple
-    - es fácil de leer
-    - sirve tanto para principiantes como para expertos
-    - tiene muchas librerías especializadas
-Librerías importantes:
+WHY IS PYTHON USED IN AI?
+Python is widely used in AI because:
+    - it has simple syntax
+    - it is easy to read
+    - it is suitable for both beginners and experts
+    - it has many specialized libraries
+
+Important libraries:
     - TensorFlow
     - PyTorch
     - scikit-learn
-Python facilita escribir, entender y mantener programas relacionados con machine learning y deep learning.
+
+Python makes it easier to write, understand, and maintain programs related to machine learning and deep learning.
 """
 
 """
-FUNDAMENTOS DE PYTHON IMPORTANTES PARA IA
+IMPORTANT PYTHON FUNDAMENTALS FOR AI
+
 DATA TYPES AND OPERATORS
-Los tipos de datos permiten representar información. En IA son importantes para guardar datos, etiquetas y resultados.
-Tipos:
+Data types allow information to be represented. In AI, they are important for storing data, labels, and results.
+
+Types:
     - list
     - dictionary
     - tuple
-Ejemplo conceptual:
-Un diccionario puede relacionar un archivo con su etiqueta.
+
+Conceptual example:
+A dictionary can associate a file with its label.
 """
-archivo_a_etiqueta = {
+
+file_to_label = {
     "dog_001.jpg": "beagle",
     "dog_002.jpg": "poodle",
 }
+
 """
-key   -> nombre del archivo / identificador
-value -> etiqueta / clasificación
+key   -> file name / identifier
+value -> label / classification
 """
 
 """
 DATA STRUCTURES
-Las estructuras de datos ayudan a almacenar y organizar grandes cantidades de información de forma eficiente.
-Estructuras destacadas:
+Data structures help store and organize large amounts of information efficiently.
+
+Key structures:
     - lists
     - dictionaries
     - sets
-Uso en IA:
-    - guardar datasets
-    - almacenar etiquetas
-    - registrar clasificaciones
-    - comparar resultados
-    - hacer búsquedas rápidas
-Ejemplos:
+
+Uses in AI:
+    - storing datasets
+    - storing labels
+    - recording classifications
+    - comparing results
+    - performing fast searches
 """
-imagenes = ["dog_001.jpg", "dog_002.jpg", "dog_003.jpg"]   # lista
-etiquetas = {"dog_001.jpg": "beagle"}                      # diccionario
-razas_unicas = {"beagle", "poodle", "husky"}               # set
-# los dictionaries son especialmente útiles cuando se necesita mapear un dato con su resultado o etiqueta.
+
+images = ["dog_001.jpg", "dog_002.jpg", "dog_003.jpg"]   # list
+labels = {"dog_001.jpg": "beagle"}                       # dictionary
+unique_breeds = {"beagle", "poodle", "husky"}             # set
+
+# Dictionaries are especially useful when a data item needs to be mapped to its result or label.
+
 
 """
 CONTROL FLOW
-Control flow = mecanismos para controlar cómo avanza el programa.
-Elementos principales:
+Control flow = mechanisms that control how a program executes.
+
+Main elements:
     - loops
     - conditionals
-En IA se usan para:
-    - recorrer datos
-    - procesar elementos uno por uno
-    - verificar resultados
-    - decidir acciones según condiciones
-Ejemplo conceptual:
+
+In AI, they are used to:
+    - iterate through data
+    - process elements one by one
+    - check results
+    - make decisions based on conditions
 """
-clasificaciones = {
+
+classifications = {
     "dog_001.jpg": "beagle",
     "dog_002.jpg": "poodle",
 }
-for archivo, raza in clasificaciones.items():
-    if raza == "beagle":
+
+for file, breed in classifications.items():
+    if breed == "beagle":
         pass
-        # aquí podría ejecutarse una acción específica
-# los loops permiten procesar muchos datos;
-# los conditionals permiten tomar decisiones según el resultado.
+        # A specific action could be performed here
+
+# Loops allow many data items to be processed.
+# Conditionals allow decisions to be made based on the result.
+
 
 """
 FUNCTIONS
-Una función encapsula una tarea específica.
-Ventajas:
-    - reutilización
-    - modularidad
-    - organización
-    - mantenimiento más fácil
-En IA, las funciones pueden encargarse de:
-    - leer archivos
-    - procesar datos
-    - aplicar clasificación
-    - evaluar resultados
+A function encapsulates a specific task.
+
+Advantages:
+    - reusability
+    - modularity
+    - organization
+    - easier maintenance
+
+In AI, functions can be responsible for:
+    - reading files
+    - processing data
+    - applying classification
+    - evaluating results
 """
-def ejemplo_funcion_procesamiento(datos):
-    # Ejemplo:
-    # una función recibe datos y devuelve un resultado procesado
-    return datos
-# dividir un problema grande en funciones pequeñas hace que el sistema sea más claro y más fácil de mantener.
+
+
+def example_processing_function(data):
+    # A function receives data and returns a processed result.
+    return data
+
+
+# Breaking a large problem into smaller functions makes the system clearer and easier to maintain.
+
 
 """
 OBJECT-ORIENTED PROGRAMMING (OOP)
-OOP organiza el código usando:
+OOP organizes code using:
     - classes
     - objects
-Sirve para:
-    - estructurar sistemas complejos
-    - agrupar datos y comportamiento relacionados
-    - hacer el código más mantenible
-En IA puede usarse para representar:
-    - modelos
-    - componentes de preprocesamiento
-    - partes de un pipeline
-class ModeloIA:
+
+It is useful for:
+    - structuring complex systems
+    - grouping related data and behavior
+    - making code more maintainable
+
+In AI, it can be used to represent:
+    - models
+    - preprocessing components
+    - parts of a pipeline
 """
-    # Ejemplo conceptual:
-    # una clase puede representar un modelo o componente del sistema
-def __init__(self, nombre):
-    self.nombre = nombre
-# OOP ayuda cuando el proyecto crece y necesita mejor organización.
+
+
+class AIModel:
+    def __init__(self, name):
+        self.name = name
+
+
+# OOP is helpful when a project grows and requires better organization.
+
 
 """
 SCRIPTING
-Scripting = escribir programas para automatizar tareas.
-En IA se usa para:
-    - preparar data pipelines
-    - automatizar entrenamiento
-    - automatizar evaluación
-    - gestionar experimentos
-Ejemplo conceptual:
-un script puede ejecutar varias tareas en secuencia:
-    1. cargar datos
-    2. procesarlos
-    3. clasificar
-    4. medir resultados
+Scripting = writing programs to automate tasks.
+
+In AI, it is used to:
+    - prepare data pipelines
+    - automate training
+    - automate evaluation
+    - manage experiments
+
+Conceptual example:
+A script can execute several tasks in sequence:
+    1. load data
+    2. process it
+    3. classify it
+    4. measure results
 """
